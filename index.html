@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+	<meta charset="utf-8">
+	<title>
+		Angular Tutorials
+	</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style type="text/css">
+		a {
+			display: block!important;
+		}
+
+		li {
+			list-style: none;
+		}
+		.tab {
+			width: 100%;
+			border:1px solid #ccc;
+			padding: 2%
+		}
+		p {
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body ng-controller="controller">
+
+<div class="container">
+
+<ul>
+	<li ng-repeat="item in icerik">
+		<a href="javascript:" class="btn btn-info" ng-click="sTab($index + 1)">Tab #{{$index + 1}}</a>		
+
+		<div class="tab" ng-show="aTab($index + 1)">
+			<h1>{{item}}</h1>
+			<p>
+		Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.
+			</p>
+</div>
+
+	</li>
+</ul>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
